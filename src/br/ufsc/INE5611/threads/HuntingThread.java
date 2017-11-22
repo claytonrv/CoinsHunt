@@ -1,4 +1,4 @@
-package br.com.INE5611.threads;
+package br.ufsc.INE5611.threads;
 
 import java.util.Date;
 

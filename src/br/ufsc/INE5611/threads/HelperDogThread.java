@@ -1,4 +1,4 @@
-package br.com.INE5611.threads;
+package br.ufsc.INE5611.threads;
 
 import br.ufsc.INE5611.model.BinaryTree;
 import br.ufsc.INE5611.model.Node;

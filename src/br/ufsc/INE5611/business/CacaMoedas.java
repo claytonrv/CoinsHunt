@@ -4,13 +4,13 @@ import java.util.ArrayList;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-import br.com.INE5611.threads.HelperDogThread;
-import br.com.INE5611.threads.HuntingThread;
 import br.ufsc.INE5611.enumeration.HunterColorEnum;
 import br.ufsc.INE5611.model.BinaryTree;
 import br.ufsc.INE5611.model.Dog;
 import br.ufsc.INE5611.model.Hunter;
 import br.ufsc.INE5611.model.Node;
+import br.ufsc.INE5611.threads.HelperDogThread;
+import br.ufsc.INE5611.threads.HuntingThread;
 
 public class CacaMoedas implements Runnable{
 
