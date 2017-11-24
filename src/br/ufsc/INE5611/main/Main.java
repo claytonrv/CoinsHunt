@@ -1,13 +1,13 @@
 package br.ufsc.INE5611.main;
 
-import br.ufsc.INE5611.business.CacaMoedas;
+import br.ufsc.INE5611.business.CoinsHunt;
 
 
 public class Main {
 	
 	public static void main(String[] args) {
-		Thread threadJogo = new Thread(new CacaMoedas());
-		threadJogo.start();
+		Thread gameThread = new Thread(new CoinsHunt());
+		gameThread.start();
 	}
 
 }
