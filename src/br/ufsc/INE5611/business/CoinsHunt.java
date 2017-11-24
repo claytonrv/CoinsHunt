@@ -12,7 +12,7 @@ import br.ufsc.INE5611.model.Node;
 import br.ufsc.INE5611.threads.HelperDogThread;
 import br.ufsc.INE5611.threads.HuntingThread;
 
-public class CacaMoedas implements Runnable{
+public class CoinsHunt implements Runnable{
 
 	private BinaryTree forest;
 	private Hunter greenHunter;
@@ -27,7 +27,7 @@ public class CacaMoedas implements Runnable{
 	private HuntingThread seccondPlace;
 	private HuntingThread lastOne;
 	
-	public CacaMoedas() {
+	public CoinsHunt() {
 		super();
 		this.forest = new BinaryTree();
 		this.winner = null;
