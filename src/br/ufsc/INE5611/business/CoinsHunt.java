@@ -109,15 +109,15 @@ public class CoinsHunt implements Runnable{
 				}
 			}
 			try {
-				Thread.sleep(500);
+				Thread.sleep(00);
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
 		}
-		System.out.println("O caçador vencedor foi: "+winner.getDogOwner().getColor());
+		System.out.println("O caçador vencedor foi: "+winner.getDogOwner().getColor().getDescription());
 		System.out.println("Seus cachorros encontraram "+winner.getDogOwner().getCoins()+" em "+(winner.getHuntFinish().getTime() - winner.getHuntStart().getTime())+" milisegundos.");
-		System.out.println("Segundo lugar: "+seccondPlace.getDogOwner().getColor()+" com "+seccondPlace.getDogOwner().getCoins()+" em "+(seccondPlace.getHuntFinish().getTime()-seccondPlace.getHuntStart().getTime())+" milisegundos.");
-		System.out.println("Terceiro lugar: "+lastOne.getDogOwner().getColor()+" com "+lastOne.getDogOwner().getCoins()+" em "+(lastOne.getHuntFinish().getTime()-lastOne.getHuntStart().getTime())+" milisegundos.");
+		System.out.println("Segundo lugar: "+seccondPlace.getDogOwner().getColor().getDescription()+" com "+seccondPlace.getDogOwner().getCoins()+" em "+(seccondPlace.getHuntFinish().getTime()-seccondPlace.getHuntStart().getTime())+" milisegundos.");
+		System.out.println("Terceiro lugar: "+lastOne.getDogOwner().getColor().getDescription()+" com "+lastOne.getDogOwner().getCoins()+" em "+(lastOne.getHuntFinish().getTime()-lastOne.getHuntStart().getTime())+" milisegundos.");
 		System.exit(0);
  	}
 	

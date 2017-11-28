@@ -35,7 +35,7 @@ public class HuntingThread extends Thread implements Runnable {
 					setHuntFinish(new Date());
 				}
 				try {
-					Thread.sleep(1500);
+					Thread.sleep(100);
 				} catch (InterruptedException e) {
 					e.printStackTrace();
 				}
@@ -46,7 +46,7 @@ public class HuntingThread extends Thread implements Runnable {
 						this.getCoinsOnNode(node);
 						node.setDogOnThree(null);
 						try {
-							Thread.sleep(1500);
+							Thread.sleep(100);
 						} catch (InterruptedException e) {
 							e.printStackTrace();
 						}
@@ -63,23 +63,23 @@ public class HuntingThread extends Thread implements Runnable {
 		if(node.getCoins() >= 3){
 			int coinsToRemove = huntingDog.incrementCoins((int)(Math.random() * 3)+1);
 			node.deliveryCoins(coinsToRemove);
-			System.out.println("Cão "+huntingDog.getId()+" : encontrou "+coinsToRemove+" moedas na árvore "+node.getNumber());
+			System.out.println("Cão "+huntingDog.getId()+" : encontrou "+coinsToRemove+" moedas no pote "+node.getNumber());
 			return;
 		}else if(node.getCoins() == 2){
 			int coinsToRemove = huntingDog.incrementCoins(2);
 			node.deliveryCoins(coinsToRemove);
-			System.out.println("Cão "+huntingDog.getId()+" : encontrou "+coinsToRemove+" moedas na árvore "+node.getNumber());
+			System.out.println("Cão "+huntingDog.getId()+" : encontrou "+coinsToRemove+" moedas no pote "+node.getNumber());
 			return;
 		}else if(node.getCoins() == 1){
 			int coinsToRemove = huntingDog.incrementCoins(1);
 			node.deliveryCoins(coinsToRemove);
-			System.out.println("Cão "+huntingDog.getId()+" : encontrou "+coinsToRemove+" moedas na árvore "+node.getNumber());
+			System.out.println("Cão "+huntingDog.getId()+" : encontrou "+coinsToRemove+" moedas no pote "+node.getNumber());
 			return;
 		}else{
 			while(node.getCoins() < 1){
 				System.out.println("Cão "+huntingDog.getId()+" : não encontrou moedas na árvore "+node.getNumber()+" Aguardando até existirem moedas para retirar.");
 				try{
-					Thread.sleep(1500);
+					Thread.sleep(6000);
 					this.getCoinsOnNode(forest.find(node.getNumber()));
 				}catch(Exception e){
 					e.printStackTrace();
@@ -93,7 +93,7 @@ public class HuntingThread extends Thread implements Runnable {
 		    do {                                                   
 		        this.nextNodeToHunt = (int)(Math.random() * 20);
 		        try {
-					Thread.sleep(600);
+					Thread.sleep(100);
 				} catch (InterruptedException e) {
 					e.printStackTrace();
 				}
@@ -102,7 +102,7 @@ public class HuntingThread extends Thread implements Runnable {
 		    this.nextNodeToHunt = 0;                                   
 		}                    
 		try {
-			Thread.sleep(1000);
+			Thread.sleep(100);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}

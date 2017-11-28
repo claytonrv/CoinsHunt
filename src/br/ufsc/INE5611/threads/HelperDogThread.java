@@ -23,7 +23,7 @@ public class HelperDogThread extends Thread implements Runnable{
 				this.deliveryCoins(next);
 			}
 			try {
-				Thread.sleep(500);
+				Thread.sleep(200);
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
